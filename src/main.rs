@@ -3,5 +3,5 @@ mod discord;
 
 #[tokio::main]
 async fn main() {
-    discord::launch_discord().await;
+    discord::launch_discord().await;   
 }
