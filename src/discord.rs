@@ -35,8 +35,8 @@ async fn manage_alerts(ctx: &Context) -> Result<(), Box<dyn Error>> {
 
 async fn send_alert(ctx: &Context, name: &str, old: &Data, new: &Data) {
     let target = serenity::model::id::ChannelId(860552501785657429);
-    let oi_change = old.oi - new.oi;
-    let vol_change = old.volume - new.volume;
+    let oi_change = new.oi - old.oi;
+    let vol_change = new.volume - old.volume;
 
     let msg = format!("<@&860619201765310495>```Name: {}\n1hr OI Change: {}\n1hr Volume Change: {}\n```", name, oi_change, vol_change);
 
