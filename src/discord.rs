@@ -53,7 +53,7 @@ async fn send_alert(ctx: &Context, name: &str, old: &Data, new: &Data) {
 }
 
 pub async fn launch_discord() {
-    let token = "ODYwNjA2ODEyNTAzODAxOTE2.YN9sjQ.ZJj18cHbSXdYgTXZJjI_UUkJJSg";
+    let token = "TOKEN";
     let framework = StandardFramework::new();
     let mut client = Client::builder(&token)
     .framework(framework)
